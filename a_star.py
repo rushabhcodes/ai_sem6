@@ -10,7 +10,7 @@ def astar(grid, start, goal):
     g_score = {start: 0}
 
     while open_set:
-        _, cost, current = heapq.heappop(open_set)
+        f_score, cost, current = heapq.heappop(open_set)
         if current == goal:
             path = []
             while current in came_from:
